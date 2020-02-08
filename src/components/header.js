@@ -11,39 +11,40 @@ const Header = ({ siteTitle, showBrand, brandClass, navBaseClass }) => {
   console.log("brandClass: " + brandClass);
   if (!navBaseClass) navBaseClass = "nav-link";
   return (
-  <header>
-	<nav className="navbar navbar-expand-lg fixed-top navbar-light" fixed="top"> 
-      <span className="navbar-brand" href="#"><Link to="/" style={{visibility: showBrand ? '' : 'hidden'}} className={brandClass}><Icon /></Link></span>
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+    <header>
+      <nav className="navbar navbar-expand-lg fixed-top navbar-light" fixed="top">
+        <span className="navbar-brand" href="#"><Link to="/" style={{ visibility: showBrand ? '' : 'hidden' }} className={brandClass}><Icon /></Link></span>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-	  <div className="collapse navbar-collapse justify-content-stretch" id="navbarSupportedContent">
-		<ul className="navbar-nav ml-auto">
-		  <li className="nav-item">
-		    <Link className={navBaseClass} activeClassName="active-link" to="">welcome</Link>
-		  </li>
-		  <li><span className="nav-link">{` `}</span></li>
-		  <li className="nav-item">
-		    <Link className={navBaseClass} activeClassName="active-link" to="/services">services</Link>
-		  </li>
-		  <li><span className="nav-link">{` `}</span></li>
-		  <li className="nav-item">
-		    <Link className={navBaseClass} activeClassName="active-link" to="/philosophy">philosophy</Link>
-		  </li>
-		  <li><span className="nav-link">{` `}</span></li>
-		  <li className="nav-item">
-		    <Link className={navBaseClass} activeClassName="active-link" to="/contact">contact</Link>
-		  </li>
-		  <li><span className="nav-link">{` `}</span></li>
-		  <li className="nav-item">
-		    <Link className={navBaseClass} activeClassName="active-link" to="/about">+</Link>
-		  </li>
-		</ul>
-	  </div>
-	</nav>
-  </header>
-)}
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse justify-content-stretch" id="navbarSupportedContent">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+              <Link className={navBaseClass} activeClassName="active-link" to="">welcome</Link>
+            </li>
+            <li><span className="nav-link">{` `}</span></li>
+            <li className="nav-item">
+              <Link className={navBaseClass} activeClassName="active-link" to="/services">services</Link>
+            </li>
+            <li><span className="nav-link">{` `}</span></li>
+            <li className="nav-item">
+              <Link className={navBaseClass} activeClassName="active-link" to="/philosophy">philosophy</Link>
+            </li>
+            <li><span className="nav-link">{` `}</span></li>
+            <li className="nav-item">
+              <Link className={navBaseClass} activeClassName="active-link" to="/contact">contact</Link>
+            </li>
+            <li><span className="nav-link">{` `}</span></li>
+            <li className="nav-item">
+              <Link className={navBaseClass} activeClassName="active-link" to="/about">+</Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  )
+}
 // <li className="nav-item"><Link className="nav-link" style={{ color: navLinkColor }}>contact</Link></li>
 /* to make a transparent backgruond on nav link holder: backgroundColor: `rgba(255,255,255,.98)` */
 /*  
@@ -66,7 +67,7 @@ export default Header
 /*
   <nav className="navbar navbar-expand-lg fixed-top" fixed="top">
 		<a className="navbar-brand" href="#"><Link to="/"><Icon /></Link></a>
-		<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+		<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 		    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		  <span className="navbar-toggler-icon"></span>
 		</button>

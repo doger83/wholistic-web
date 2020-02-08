@@ -25,66 +25,67 @@ import Philosophy from "../components/philosophy"
 const About = () => {
   const wholisticComponent = useRef(null);
   const [showBrand, setShowBrand] = useState(true);
-  useEffect(() => { 
+  useEffect(() => {
     function handleScroll() {
       //setScrollPosition(getScroll())
       let scrollY = window.scrollY;
       //console.log("Scroll: " + scrollY);
-      if (scrollY > 1){
-		let wholisticOuter = document.getElementById("wholistic-outer");
-		if (wholisticOuter){
-		  let woHeight = wholisticOuter.scrollHeight;
-		  //console.log("wholisticComponent: " + wholisticOuter.scrollHeight);
-		  if (scrollY >= (woHeight - 100)){
-	        setShowBrand(true);
-		  } else {
-			setShowBrand(false);
-		  }
-		}
-	  }
+      if (scrollY > 1) {
+        let wholisticOuter = document.getElementById("wholistic-outer");
+        if (wholisticOuter) {
+          let woHeight = wholisticOuter.scrollHeight;
+          //console.log("wholisticComponent: " + wholisticOuter.scrollHeight);
+          if (scrollY >= (woHeight - 100)) {
+            setShowBrand(true);
+          } else {
+            setShowBrand(false);
+          }
+        }
+      }
     }
-	if (window){
-	  console.log("window: " + window);
-	  window.addEventListener('scroll', handleScroll);
-	}
-	return () => window.removeEventListener('scroll', handleScroll)
+    if (window) {
+      console.log("window: " + window);
+      window.addEventListener('scroll', handleScroll);
+    }
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []);
   let onWelcomeClick = () => {
     console.info("BEGIN onWelcomeClick()");
-	let wholisticOuter = document.getElementById("wholistic-outer");
-	if (wholisticOuter){
-	  let woHeight = wholisticOuter.scrollHeight;
-	  console.error("a woHeight: " + woHeight);
-	  if (window)
-	    console.info("woHeight: " + woHeight);
-		window.scroll({
-		  top: (woHeight), 
-		  left: 0, 
-		  behavior: 'smooth'
-		});
-	  }
+    let wholisticOuter = document.getElementById("wholistic-outer");
+    if (wholisticOuter) {
+      let woHeight = wholisticOuter.scrollHeight;
+      console.error("a woHeight: " + woHeight);
+      if (window)
+        console.info("woHeight: " + woHeight);
+      window.scroll({
+        top: (woHeight),
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
   }
   return (
-    <div style={{padding: `10rem`}}>
+    <div style={{ padding: `1rem` }}>
       <h2>About this Website</h2>
       <h3>Photographs</h3>
       <p>The shot of the river on this website comes from the extraordinary nature photography of Jane Palmer: janepalmerphotography.com</p>
       <p>In addition to photography, Jane is passionate about Horse Rescue: <a href="http://www.equineadoption.com/">Equestrian Rescue Foundation.</a></p>
-      <hr/>
+      <hr />
       <h3>Development</h3>
-      <p>Some of the work on this UI was done by Dominic Gerweck, of Verden (Aller), Deutschland.</p>
+      <p>Some of the work on this UI was done by Dominic Gerweck, Verden (Aller), Deutschland.</p>
       <p>dominic-gerweck.de | @Doger83_Dev</p>
-      <hr/>
+      <hr />
       <p>This page uses Gatsby, on top of React.</p>
       <p>See something you think could be better?</p>
       <p>Fix it: wholistic-web github</p>
     </div>
-)}
+  )
+}
 
 export default About
 
 /*
- * 
+ *
  * -componentDidMount() {
 +useEffect(() => {
    axios
